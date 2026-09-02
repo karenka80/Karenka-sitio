@@ -36,25 +36,36 @@
   header.page-head .sub{max-width:34rem; margin:1.25rem auto 0; color:var(--cream-400); line-height:1.7; font-size:1rem;}
 
   .video-gallery{padding:0 0 6rem;}
-  .video-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.75rem;}
-  .video-card{display:block;}
-  .video-embed{position:relative; display:block; padding-top:56.25%; background:var(--ink-800); border-radius:4px; overflow:hidden;}
-  .video-embed img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .3s ease, filter .3s ease;}
-  .video-card:hover .video-embed img{transform:scale(1.03); filter:brightness(0.75);}
+  .video-gallery .wrap{max-width:1400px; padding:0 4px;}
+  .video-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:4px;}
+  .video-card{display:block; position:relative;}
+  .video-embed{position:relative; display:block; padding-top:56.25%; background:var(--ink-800); overflow:hidden;}
+  .video-embed img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .35s ease, filter .35s ease;}
+  .video-card:hover .video-embed img{transform:scale(1.04); filter:brightness(0.55);}
   .play-btn{
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    width:60px; height:60px; border-radius:50%;
-    background:var(--pink-500); display:flex; align-items:center; justify-content:center;
-    transition:background .2s ease, transform .2s ease;
+    width:52px; height:52px; border-radius:50%;
+    background:rgba(244,238,225,0.15); border:1.5px solid rgba(244,238,225,0.7);
+    display:flex; align-items:center; justify-content:center;
+    transition:background .2s ease, border-color .2s ease, transform .2s ease;
   }
-  .video-card:hover .play-btn{background:var(--pink-300); transform:translate(-50%,-50%) scale(1.08);}
-  .play-btn svg{width:22px; height:22px; fill:var(--ink-950); margin-left:3px;}
-  .video-title{display:block; margin-top:0.9rem; font-size:1.05rem; font-weight:500;}
-  .video-meta{display:block; margin-top:0.25rem; font-size:0.82rem; color:var(--cream-400);}
+  .video-card:hover .play-btn{background:var(--pink-500); border-color:var(--pink-500); transform:translate(-50%,-50%) scale(1.08);}
+  .play-btn svg{width:18px; height:18px; fill:var(--cream-100); margin-left:2px;}
+  .video-title-overlay{
+    position:absolute; left:0; right:0; bottom:0; padding:2.5rem 1.25rem 1.1rem;
+    background:linear-gradient(to top, rgba(10,22,32,0.92) 0%, rgba(10,22,32,0) 100%);
+    opacity:0; transition:opacity .25s ease;
+  }
+  .video-card:hover .video-title-overlay{opacity:1;}
+  .video-title{display:block; font-size:0.85rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--cream-100);}
+  .video-meta{display:block; margin-top:0.2rem; font-size:0.72rem; letter-spacing:0.03em; color:var(--cream-400);}
 
   footer{text-align:center; padding:2.5rem 1.5rem; color:var(--cream-400); font-size:0.85rem; border-top:1px solid rgba(217,164,65,0.15);}
 
-  @media (max-width: 640px){
+  @media (max-width: 720px){
+    .video-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width: 460px){
     .video-grid{grid-template-columns:1fr;}
   }
 </style>
@@ -82,54 +93,66 @@
         <span class="video-embed">
           <img src="https://img.youtube.com/vi/Pro1J19gn5k/hqdefault.jpg" alt="Portada del video Hay Tiempos" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+          <span class="video-title-overlay">
+            <span class="video-title">Hay Tiempos</span>
+            <span class="video-meta">Video oficial</span>
+          </span>
         </span>
-        <span class="video-title">Hay Tiempos</span>
-        <span class="video-meta">Video oficial</span>
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=fZnlOwZD3Uc" target="_blank" rel="noopener">
         <span class="video-embed">
           <img src="https://img.youtube.com/vi/fZnlOwZD3Uc/hqdefault.jpg" alt="Portada del video Mujer de Acero" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+          <span class="video-title-overlay">
+            <span class="video-title">Mujer de Acero</span>
+            <span class="video-meta">Video oficial</span>
+          </span>
         </span>
-        <span class="video-title">Mujer de Acero</span>
-        <span class="video-meta">Video oficial</span>
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=aPOjYv18a4k" target="_blank" rel="noopener">
         <span class="video-embed">
           <img src="https://img.youtube.com/vi/aPOjYv18a4k/hqdefault.jpg" alt="Portada del video Mientras tenga Vida" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+          <span class="video-title-overlay">
+            <span class="video-title">Mientras tenga Vida</span>
+            <span class="video-meta">Video musical oficial</span>
+          </span>
         </span>
-        <span class="video-title">Mientras tenga Vida</span>
-        <span class="video-meta">Video musical oficial</span>
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=4NrPULdshPU" target="_blank" rel="noopener">
         <span class="video-embed">
           <img src="https://img.youtube.com/vi/4NrPULdshPU/hqdefault.jpg" alt="Portada del video Soy de Piel" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+          <span class="video-title-overlay">
+            <span class="video-title">Soy de Piel</span>
+            <span class="video-meta">Video oficial</span>
+          </span>
         </span>
-        <span class="video-title">Soy de Piel</span>
-        <span class="video-meta">Video oficial</span>
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=nzeOs37jO_c" target="_blank" rel="noopener">
         <span class="video-embed">
           <img src="https://img.youtube.com/vi/nzeOs37jO_c/hqdefault.jpg" alt="Portada del video Que Te Perdone Dios" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+          <span class="video-title-overlay">
+            <span class="video-title">Que Te Perdone Dios</span>
+            <span class="video-meta">Video oficial</span>
+          </span>
         </span>
-        <span class="video-title">Que Te Perdone Dios</span>
-        <span class="video-meta">Video oficial</span>
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=NUqBE_24A84" target="_blank" rel="noopener">
         <span class="video-embed">
           <img src="https://img.youtube.com/vi/NUqBE_24A84/hqdefault.jpg" alt="Portada del video Polos Opuestos" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+          <span class="video-title-overlay">
+            <span class="video-title">Polos Opuestos</span>
+            <span class="video-meta">Video oficial</span>
+          </span>
         </span>
-        <span class="video-title">Polos Opuestos</span>
-        <span class="video-meta">Video oficial</span>
       </a>
 
     </div>
