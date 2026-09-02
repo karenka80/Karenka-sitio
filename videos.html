@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Videos — Karenka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink-950:#0A1620; --ink-900:#0F202D; --ink-800:#152A3A;
+    --pink-500:#E1436B; --pink-300:#F090A8;
+    --gold-500:#D9A441; --gold-300:#EAC57C;
+    --cream-100:#F4EEE1; --cream-400:#B9AF9C;
+    --font-display:'Bebas Neue', sans-serif;
+    --font-body:'Work Sans', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink-950); color:var(--cream-100); font-family:var(--font-body); line-height:1.55; -webkit-font-smoothing:antialiased;}
+  h1,h2{font-family:var(--font-display); font-weight:400; letter-spacing:0.01em; margin:0;}
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  a:focus-visible{outline:2px solid var(--pink-300); outline-offset:3px; border-radius:2px;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 1.5rem;}
+
+  .nav{position:sticky; top:0; z-index:50; background:rgba(10,22,32,0.9); backdrop-filter:blur(8px); border-bottom:1px solid rgba(217,164,65,0.18);}
+  .nav-inner{max-width:1100px; margin:0 auto; padding:1.1rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;}
+  .wordmark{font-family:var(--font-display); font-size:1.5rem; letter-spacing:0.06em;}
+  .back-link{font-size:0.9rem; color:var(--cream-400); border-bottom:1px solid transparent; padding-bottom:2px; transition:color .2s ease, border-color .2s ease;}
+  .back-link:hover{color:var(--gold-300); border-color:var(--gold-500);}
+
+  header.page-head{padding:5rem 1.5rem 3rem; text-align:center;}
+  .page-head p.kicker{color:var(--pink-300); font-size:0.9rem; margin-bottom:0.75rem;}
+  header.page-head h1{font-size:clamp(3rem,9vw,5.5rem);}
+  header.page-head .sub{max-width:34rem; margin:1.25rem auto 0; color:var(--cream-400); line-height:1.7; font-size:1rem;}
+
+  .video-gallery{padding:0 0 6rem;}
+  .video-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.75rem;}
+  .video-card{display:block;}
+  .video-embed{position:relative; display:block; padding-top:56.25%; background:var(--ink-800); border-radius:4px; overflow:hidden;}
+  .video-embed img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .3s ease, filter .3s ease;}
+  .video-card:hover .video-embed img{transform:scale(1.03); filter:brightness(0.75);}
+  .play-btn{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:60px; height:60px; border-radius:50%;
+    background:var(--pink-500); display:flex; align-items:center; justify-content:center;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .video-card:hover .play-btn{background:var(--pink-300); transform:translate(-50%,-50%) scale(1.08);}
+  .play-btn svg{width:22px; height:22px; fill:var(--ink-950); margin-left:3px;}
+  .video-title{display:block; margin-top:0.9rem; font-size:1.05rem; font-weight:500;}
+  .video-meta{display:block; margin-top:0.25rem; font-size:0.82rem; color:var(--cream-400);}
+
+  footer{text-align:center; padding:2.5rem 1.5rem; color:var(--cream-400); font-size:0.85rem; border-top:1px solid rgba(217,164,65,0.15);}
+
+  @media (max-width: 640px){
+    .video-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="index.html">KARENKA</a>
+    <a class="back-link" href="index.html">← Volver al sitio</a>
+  </div>
+</header>
+
+<header class="page-head">
+  <p class="kicker">Canal oficial en YouTube</p>
+  <h1>Videos</h1>
+  <p class="sub">Todos los videos musicales oficiales de Karenka. Toca cualquiera para verlo en YouTube.</p>
+</header>
+
+<section class="video-gallery">
+  <div class="wrap">
+    <div class="video-grid">
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=Pro1J19gn5k" target="_blank" rel="noopener">
+        <span class="video-embed">
+          <img src="https://img.youtube.com/vi/Pro1J19gn5k/hqdefault.jpg" alt="Portada del video Hay Tiempos" loading="lazy">
+          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+        </span>
+        <span class="video-title">Hay Tiempos</span>
+        <span class="video-meta">Video oficial</span>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=fZnlOwZD3Uc" target="_blank" rel="noopener">
+        <span class="video-embed">
+          <img src="https://img.youtube.com/vi/fZnlOwZD3Uc/hqdefault.jpg" alt="Portada del video Mujer de Acero" loading="lazy">
+          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+        </span>
+        <span class="video-title">Mujer de Acero</span>
+        <span class="video-meta">Video oficial</span>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=aPOjYv18a4k" target="_blank" rel="noopener">
+        <span class="video-embed">
+          <img src="https://img.youtube.com/vi/aPOjYv18a4k/hqdefault.jpg" alt="Portada del video Mientras tenga Vida" loading="lazy">
+          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+        </span>
+        <span class="video-title">Mientras tenga Vida</span>
+        <span class="video-meta">Video musical oficial</span>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=4NrPULdshPU" target="_blank" rel="noopener">
+        <span class="video-embed">
+          <img src="https://img.youtube.com/vi/4NrPULdshPU/hqdefault.jpg" alt="Portada del video Soy de Piel" loading="lazy">
+          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+        </span>
+        <span class="video-title">Soy de Piel</span>
+        <span class="video-meta">Video oficial</span>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=nzeOs37jO_c" target="_blank" rel="noopener">
+        <span class="video-embed">
+          <img src="https://img.youtube.com/vi/nzeOs37jO_c/hqdefault.jpg" alt="Portada del video Que Te Perdone Dios" loading="lazy">
+          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+        </span>
+        <span class="video-title">Que Te Perdone Dios</span>
+        <span class="video-meta">Video oficial</span>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=NUqBE_24A84" target="_blank" rel="noopener">
+        <span class="video-embed">
+          <img src="https://img.youtube.com/vi/NUqBE_24A84/hqdefault.jpg" alt="Portada del video Polos Opuestos" loading="lazy">
+          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+        </span>
+        <span class="video-title">Polos Opuestos</span>
+        <span class="video-meta">Video oficial</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer><p>KK Productions</p></footer>
+
+</body>
+</html>
