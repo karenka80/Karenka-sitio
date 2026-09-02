@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karenka — Cantante, compositora y bailarina cubana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink-950:#0A1620;
+    --ink-900:#0F202D;
+    --ink-800:#152A3A;
+    --ink-700:#1D3A4D;
+    --pink-500:#E1436B;
+    --pink-300:#F090A8;
+    --gold-500:#D9A441;
+    --gold-300:#EAC57C;
+    --cream-100:#F4EEE1;
+    --cream-400:#B9AF9C;
+    --font-display:'Bebas Neue', sans-serif;
+    --font-body:'Work Sans', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0; background:var(--ink-950); color:var(--cream-100);
+    font-family:var(--font-body); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--font-display); font-weight:400; letter-spacing:0.01em; margin:0;}
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  section{padding:6rem 1.5rem;}
+  .wrap{max-width:1100px; margin:0 auto;}
+  ::selection{background:var(--pink-500); color:var(--ink-950);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--pink-300); outline-offset:3px; border-radius:2px;}
+
+  /* Nav */
+  .nav{position:sticky; top:0; z-index:50; background:var(--ink-950); border-bottom:1px solid rgba(217,164,65,0.18);}
+  .nav-inner{max-width:1300px; margin:0 auto; padding:1rem 1.5rem; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1rem;}
+  .nav-links{display:flex; gap:1.5rem; flex-wrap:wrap;}
+  .nav-links a{font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--cream-400); border-bottom:1px solid transparent; padding-bottom:2px; transition:color .2s ease, border-color .2s ease;}
+  .nav-links a:hover{color:var(--pink-300); border-color:var(--pink-500);}
+  .wordmark{font-family:var(--font-display); font-size:2rem; letter-spacing:0.1em; color:var(--cream-100); text-align:center;}
+  .nav-right{display:flex; align-items:center; justify-content:flex-end; gap:1.25rem; flex-wrap:wrap;}
+  .nav-icons{display:flex; align-items:center; gap:1rem;}
+  .nav-icons a{color:var(--cream-400); display:flex; transition:color .2s ease;}
+  .nav-icons a:hover{color:var(--pink-300);}
+  .nav-icons svg{width:18px; height:18px;}
+  .nav-cta{border:1px solid var(--gold-500); color:var(--gold-300); font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.55rem 1.1rem; border-radius:2px; transition:background .2s ease;}
+  .nav-cta:hover{background:rgba(217,164,65,0.12);}
+  @media (max-width: 900px){
+    .nav-inner{grid-template-columns:1fr; text-align:center;}
+    .nav-links, .nav-right{justify-content:center;}
+  }
+
+  /* Hero */
+  #inicio{padding:0;}
+  .hero-photo{
+    position:relative; width:100%; height:100vh; min-height:560px; overflow:hidden;
+    background:var(--ink-950);
+  }
+  .hero-photo img{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:50% 2%;
+  }
+  .hero-photo::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(to top, var(--ink-950) 0%, rgba(10,22,32,0) 22%);
+  }
+  .hero-sub{text-align:center; padding:4rem 1.5rem 3rem;}
+  .hero-name{font-size:0.95rem; color:var(--cream-400); margin-bottom:1rem;}
+  .hero-tagline{font-size:1.1rem; line-height:1.7; color:var(--cream-400); max-width:36rem; margin:0 auto;}
+  .hero-actions{margin-top:2.25rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:0.85rem 1.75rem; font-size:0.9rem; letter-spacing:0.03em; border-radius:2px; transition:background .2s ease, color .2s ease, border-color .2s ease;}
+  .btn-pink{background:var(--pink-500); color:var(--ink-950); font-weight:600;}
+  .btn-pink:hover{background:var(--pink-300);}
+  .btn-outline{border:1px solid var(--gold-500); color:var(--gold-300);}
+  .btn-outline:hover{background:rgba(217,164,65,0.1);}
+  .btn-sm{padding:0.6rem 1.25rem; font-size:0.82rem;}
+
+  /* Video / out now */
+  .video-section{background:var(--ink-900); border-top:1px solid rgba(217,164,65,0.15); border-bottom:1px solid rgba(217,164,65,0.15);}
+  .video-label{color:var(--pink-300); font-size:0.9rem; margin-bottom:0.5rem;}
+  .video-section h2{font-size:clamp(2.5rem,6vw,4rem);}
+  .video-grid{display:grid; grid-template-columns:1fr; gap:1.5rem; margin-top:2rem;}
+  .video-embed{position:relative; display:block; padding-top:56.25%; background:var(--ink-800); border-radius:4px; overflow:hidden;}
+  .video-embed img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .3s ease, filter .3s ease;}
+  .video-embed:hover img{transform:scale(1.03); filter:brightness(0.75);}
+  .play-btn{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:76px; height:76px; border-radius:50%;
+    background:var(--pink-500); display:flex; align-items:center; justify-content:center;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .video-embed:hover .play-btn{background:var(--pink-300); transform:translate(-50%,-50%) scale(1.08);}
+  .play-btn svg{width:28px; height:28px; fill:var(--ink-950); margin-left:4px;}
+  .video-caption{color:var(--cream-400); font-size:0.92rem; margin-top:1rem;}
+  .video-caption a{color:var(--gold-300); border-bottom:1px solid var(--gold-500);}
+
+  /* Frio release */
+  .release{text-align:center;}
+  .release-date{font-family:var(--font-display); font-size:clamp(3rem,9vw,5.5rem); color:var(--gold-300); letter-spacing:0.04em;}
+  .release-kicker{color:var(--pink-300); font-size:0.9rem; margin-bottom:0.75rem;}
+  .release h2{font-size:clamp(2.75rem,7vw,4.5rem); margin-top:0.5rem;}
+  .release-desc{max-width:36rem; margin:1.5rem auto 0; color:var(--cream-400); line-height:1.75; font-size:1rem;}
+  .release .btn{margin-top:2rem;}
+
+  /* Shows - gig list */
+  .shows{background:var(--ink-900);}
+  .shows h2{font-size:clamp(2.5rem,6vw,4rem); margin-bottom:2.5rem;}
+  .show-row{
+    display:grid; grid-template-columns:1.4fr 2.4fr auto; gap:1.5rem; align-items:center;
+    padding:1.75rem 0; border-bottom:1px solid rgba(217,164,65,0.18);
+  }
+  .show-row:first-of-type{border-top:1px solid rgba(217,164,65,0.18);}
+  .show-name{font-family:var(--font-display); font-size:1.6rem; letter-spacing:0.02em;}
+  .show-venue{display:block; color:var(--pink-300); font-size:0.82rem; margin-top:0.3rem;}
+  .show-desc{color:var(--cream-400); font-size:0.95rem; line-height:1.6;}
+  .shows-footnote{margin-top:2rem; color:var(--cream-400); font-style:italic; font-size:0.92rem;}
+
+  /* Bio */
+  .bio-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:3.5rem; align-items:start;}
+  .bio-text{text-align:center;}
+  .bio-text h2{font-size:clamp(2.5rem,6vw,4rem); margin-bottom:1.5rem;}
+  .bio-text p{color:var(--cream-400); line-height:1.85; font-size:1rem; max-width:34rem; margin-left:auto; margin-right:auto;}
+  .bio-text p + p{margin-top:1.25rem;}
+  .portrait-frame{
+    aspect-ratio:3/4; background:var(--ink-800); border:1px solid rgba(217,164,65,0.3);
+    border-radius:4px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:2rem; gap:1rem;
+  }
+  .portrait-frame svg{width:32px; height:32px; opacity:0.7;}
+  .portrait-frame p{color:var(--cream-400); font-size:0.88rem; font-style:italic; max-width:11rem;}
+  .stats-belt{margin-top:4rem; padding-top:2.5rem; border-top:1px solid rgba(217,164,65,0.2); display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; text-align:center;}
+  .stat-num{display:block; font-family:var(--font-display); font-size:2.75rem; color:var(--pink-300); letter-spacing:0.02em;}
+  .stat-label{display:block; margin-top:0.35rem; font-size:0.82rem; color:var(--cream-400);}
+
+  /* Social tiles */
+  .social{background:var(--ink-900);}
+  .social h2{font-size:clamp(2.5rem,6vw,4rem); margin-bottom:0.75rem;}
+  .social > .wrap > p{color:var(--cream-400); max-width:30rem; margin-bottom:2.5rem;}
+  .social-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem;}
+  .social-tile{background:var(--ink-800); border-left:3px solid var(--gold-500); padding:1.75rem; border-radius:0 4px 4px 0; transition:border-color .2s ease;}
+  .social-tile:nth-child(2){border-left-color:var(--pink-500);}
+  .social-tile-name{font-family:var(--font-display); font-size:1.3rem; letter-spacing:0.02em; display:block;}
+  .social-tile-meta{color:var(--cream-400); font-size:0.85rem; margin-top:0.4rem; display:block;}
+
+  /* Music */
+  .music{text-align:center;}
+  .music h2{font-size:clamp(2.5rem,6vw,4rem);}
+  .music p{max-width:36rem; margin:1.5rem auto 0; color:var(--cream-400); line-height:1.8; font-size:1rem;}
+  .music-links{margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;}
+
+  /* Press */
+  .press{background:var(--ink-900); text-align:center; border-top:1px solid rgba(217,164,65,0.15);}
+  .press h2{font-size:clamp(2.5rem,6vw,4rem); margin-bottom:2.5rem;}
+  .press-row{display:flex; flex-wrap:wrap; justify-content:center;}
+  .press-row span{font-family:var(--font-display); letter-spacing:0.03em; color:var(--cream-400); font-size:1.1rem; padding:0 1.5rem; border-left:1px solid rgba(217,164,65,0.25);}
+  .press-row span:first-child{border-left:none;}
+
+  /* Contact */
+  .contact{text-align:center; border-top:1px solid rgba(217,164,65,0.2);}
+  .contact h2{font-size:clamp(2.5rem,6vw,4rem);}
+  .contact > .wrap > p{max-width:30rem; margin:1.25rem auto 0; color:var(--cream-400); line-height:1.7;}
+  .contact-card{margin:2.5rem auto 0; max-width:26rem; background:var(--ink-800); border:1px solid rgba(217,164,65,0.3); border-radius:4px; padding:2.25rem;}
+  .contact-name{font-family:var(--font-display); font-size:1.6rem; letter-spacing:0.02em;}
+  .contact-role{color:var(--cream-400); font-size:0.85rem; margin-top:0.3rem;}
+  .contact-links{margin-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;}
+  .contact-links a{border:1px solid var(--gold-500); color:var(--gold-300); padding:0.7rem 1rem; border-radius:2px; font-size:0.9rem; transition:background .2s ease;}
+  .contact-links a:hover{background:rgba(217,164,65,0.1);}
+
+  footer{text-align:center; padding:2.5rem 1.5rem; color:var(--cream-400); font-size:0.85rem; border-top:1px solid rgba(217,164,65,0.15);}
+
+  @media (max-width: 820px){
+    .bio-grid{grid-template-columns:1fr;}
+    .portrait-frame{max-width:18rem; margin:0 auto;}
+    .stats-belt{grid-template-columns:repeat(2,1fr); row-gap:2rem;}
+    .social-grid{grid-template-columns:1fr;}
+    .show-row{grid-template-columns:1fr; gap:0.5rem;}
+    .press-row span{border-left:none; padding:0.4rem 1rem;}
+    section{padding:4.5rem 1.25rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <nav class="nav-links">
+      <a href="#shows">Shows</a>
+      <a href="musica.html" target="_blank" rel="noopener">Música</a>
+      <a href="#redes">Redes</a>
+      <a href="#prensa">Prensa</a>
+    </nav>
+    <a class="wordmark" href="#inicio">KARENKA</a>
+    <div class="nav-right">
+      <div class="nav-icons">
+        <a href="https://www.instagram.com/karenkaoficial/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-2.5h5L16 7"/><circle cx="12" cy="13.5" r="3.2"/></svg>
+        </a>
+        <a href="https://www.facebook.com/karenkamusica/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v11H8l-4 4V5Z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@karenkaoficial" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l10-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+        </a>
+        <a href="https://open.spotify.com/intl-es/artist/66ne4pyFWsqb5ULsqsltVL" target="_blank" rel="noopener" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="19" r="1.3"/><path d="M8 15.3a5.7 5.7 0 0 1 8 0M5 11.8a9.7 9.7 0 0 1 14 0"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@Karenkaoficial" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="3"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <a class="nav-cta" href="#contacto">Contrataciones</a>
+    </div>
+  </div>
+</header>
+
+<section id="inicio">
+  <div class="hero-photo">
+    <img src="karenka-hero.jpg" alt="Karenka">
+  </div>
+  <div class="hero-sub">
+    <p class="hero-name">Karen Juantorena Foyo — nacida en La Habana, hoy radica en México</p>
+    <p class="hero-tagline">Cantante, bailarina, actriz y compositora. Artista principal del Riviera Habana Show, con giras por México y Japón, y créditos de composición para Alejandro Fernández, Luis Fonsi y Belinda.</p>
+    <div class="hero-actions">
+      <a href="#shows" class="btn btn-pink">Ver shows en vivo</a>
+      <a href="https://open.spotify.com/intl-es/artist/66ne4pyFWsqb5ULsqsltVL" class="btn btn-outline" target="_blank" rel="noopener">Escuchar en Spotify</a>
+    </div>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="wrap">
+    <p class="video-label">Último video musical</p>
+    <h2>«Hay Tiempos»</h2>
+    <div class="video-grid">
+      <a class="video-embed" href="https://www.youtube.com/watch?v=Pro1J19gn5k" target="_blank" rel="noopener" aria-label="Ver «Hay Tiempos» en YouTube">
+        <img src="https://img.youtube.com/vi/Pro1J19gn5k/hqdefault.jpg" alt="Portada del video Hay Tiempos" loading="lazy">
+        <span class="play-btn" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg>
+        </span>
+      </a>
+      <p class="video-caption">Escrita por Andrés Castro y Karenka.</p>
+    </div>
+  </div>
+</section>
+
+<section id="frio" class="release">
+  <div class="wrap">
+    <p class="release-kicker">Próximo lanzamiento</p>
+    <p class="release-date">23.09.2026</p>
+    <h2>«Frío»</h2>
+    <p class="release-desc">Un sencillo de pop latino nostálgico, escrito por Karenka junto a María Bernal, y producido por Andrés Castro (Shakira, Carlos Vives), Amed Medina (Carlos Varela) y Loris Ceroni (Kalimba, Reyli Barba).</p>
+    <a href="https://www.instagram.com/karenkaoficial/" class="btn btn-outline" target="_blank" rel="noopener">Entérate primero en Instagram</a>
+  </div>
+</section>
+
+<section id="shows" class="shows">
+  <div class="wrap">
+    <h2>Shows en vivo</h2>
+    <div class="show-row">
+      <div>
+        <span class="show-name">Riviera Habana Show</span>
+        <span class="show-venue">Vidanta — desde 2022</span>
+      </div>
+      <p class="show-desc">Espectáculo de vedette en el que Karenka baila y canta a través de un recorrido por la música cubana. Tiene su propio álbum en vivo, «Live From Riviera Habana».</p>
+      <div></div>
+    </div>
+    <div class="show-row">
+      <div>
+        <span class="show-name">Karenka Show</span>
+        <span class="show-venue">Gira — México y Japón</span>
+      </div>
+      <p class="show-desc">Su show de gira: se ha presentado en carnavales y teatros de todo México, y también en Japón.</p>
+      <div></div>
+    </div>
+    <div class="show-row">
+      <div>
+        <span class="show-name">Formato Boutique</span>
+        <span class="show-venue">Eventos privados y corporativos</span>
+      </div>
+      <p class="show-desc">Show 100% en vivo — voz principal y ensamble de cuatro músicos, noventa minutos en dos sets. Para congresos, cenas de gala y viajes de incentivo.</p>
+      <a href="#contacto" class="btn btn-pink btn-sm">Solicitar información</a>
+    </div>
+    <p class="shows-footnote">KK Productions también produce <em>Boleros y Sabores</em>, una cena-show dedicada al bolero en Vidanta.</p>
+  </div>
+</section>
+
+<section id="bio" class="bio">
+  <div class="wrap">
+    <div class="bio-grid">
+      <div class="bio-text">
+        <h2>Biografía</h2>
+        <p>Karen Juantorena Foyo, conocida en los escenarios como Karenka, es cantante, bailarina, actriz y compositora cubana. Hoy encabeza algunos de los espectáculos más reconocidos de la Riviera Maya, después de una carrera que comenzó en Cuba y la llevó a girar por México y Japón.</p>
+        <p>Además de su propia música —cuatro álbumes y más de veinte sencillos— ha escrito canciones para Alejandro Fernández, Luis Fonsi, Belinda, Alejandra Guzmán, Lucero y Maia. Con el cantautor Reyli Barba mantiene una colaboración de años: le ha compuesto temas y también ha escrito canciones a cuatro manos junto a él. Compuso además el himno por los cien años de la Cruz Roja Mexicana, y compartió escenario y videoclips con Celia Cruz, incluyendo «Mi Vida Es Cantar».</p>
+      </div>
+      <div class="portrait-frame">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3">
+          <path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z"/>
+          <path d="M19 11a7 7 0 0 1-14 0"/>
+          <line x1="12" y1="18" x2="12" y2="22"/>
+        </svg>
+        <p>Espacio para tu foto — súbela cuando la tengas</p>
+      </div>
+    </div>
+    <div class="stats-belt">
+      <div class="stat"><span class="stat-num">4+</span><span class="stat-label">álbumes</span></div>
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label">sencillos propios</span></div>
+      <div class="stat"><span class="stat-num">508K</span><span class="stat-label">seguidores en Instagram</span></div>
+      <div class="stat"><span class="stat-num">2.2M</span><span class="stat-label">alcance total en redes</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="redes" class="social">
+  <div class="wrap">
+    <h2>Redes sociales</h2>
+    <p>Síguela para ver detrás de cámaras de sus shows, adelantos de «Frío» y su día a día.</p>
+    <div class="social-grid">
+      <a class="social-tile" href="https://www.instagram.com/karenkaoficial/" target="_blank" rel="noopener">
+        <span class="social-tile-name">Instagram</span>
+        <span class="social-tile-meta">@karenkaoficial — 508K seguidores</span>
+      </a>
+      <a class="social-tile" href="https://www.facebook.com/karenkamusica/" target="_blank" rel="noopener">
+        <span class="social-tile-name">Facebook</span>
+        <span class="social-tile-meta">Karenka — 1.5M+ seguidores</span>
+      </a>
+      <a class="social-tile" href="https://www.tiktok.com/@karenkaoficial" target="_blank" rel="noopener">
+        <span class="social-tile-name">TikTok</span>
+        <span class="social-tile-meta">@karenkaoficial — 53.5K seguidores</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="musica" class="music">
+  <div class="wrap">
+    <h2>Música</h2>
+    <p>Karenka ha lanzado más de veinte sencillos y cuatro álbumes completos, entre ellos «Live From Riviera Habana». Su canal de YouTube, Karenka Oficial, reúne más de 16,500 suscriptores.</p>
+    <div class="music-links">
+      <a href="https://open.spotify.com/intl-es/artist/66ne4pyFWsqb5ULsqsltVL" class="btn btn-outline" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/@Karenkaoficial" class="btn btn-outline" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<section id="prensa" class="press">
+  <div class="wrap">
+    <h2>En medios</h2>
+    <div class="press-row">
+      <span>Televisa Espectáculos</span>
+      <span>TV Azteca</span>
+      <span>Grupo Imagen</span>
+      <span>Radio Fórmula</span>
+      <span>TVNotas</span>
+      <span>Milenio</span>
+      <span>SDP Noticias</span>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <h2>Booking y contacto</h2>
+    <p>Toda la representación artística de Karenka es exclusiva de KK Productions. Para booking, prensa o información sobre el Formato Boutique, escribe directamente.</p>
+    <div class="contact-card">
+      <p class="contact-name">Kubilay Sener</p>
+      <p class="contact-role">Productor Ejecutivo y Manager — KK Productions</p>
+      <div class="contact-links">
+        <a href="mailto:k.kubilaysener@gmail.com">k.kubilaysener@gmail.com</a>
+        <a href="https://wa.me/525573253127" target="_blank" rel="noopener">WhatsApp — 55 7325 3127</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>KK Productions</p>
+</footer>
+
+</body>
+</html>

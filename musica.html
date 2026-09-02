@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Música — Karenka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink-950:#0A1620; --ink-900:#0F202D; --ink-800:#152A3A;
+    --pink-500:#E1436B; --pink-300:#F090A8;
+    --gold-500:#D9A441; --gold-300:#EAC57C;
+    --cream-100:#F4EEE1; --cream-400:#B9AF9C;
+    --font-display:'Bebas Neue', sans-serif;
+    --font-body:'Work Sans', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink-950); color:var(--cream-100); font-family:var(--font-body); line-height:1.55; -webkit-font-smoothing:antialiased;}
+  h1,h2{font-family:var(--font-display); font-weight:400; letter-spacing:0.01em; margin:0;}
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  a:focus-visible{outline:2px solid var(--pink-300); outline-offset:3px; border-radius:2px;}
+  .wrap{max-width:820px; margin:0 auto; padding:0 1.5rem;}
+
+  .nav{position:sticky; top:0; z-index:50; background:rgba(10,22,32,0.9); backdrop-filter:blur(8px); border-bottom:1px solid rgba(217,164,65,0.18);}
+  .nav-inner{max-width:1100px; margin:0 auto; padding:1.1rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;}
+  .wordmark{font-family:var(--font-display); font-size:1.5rem; letter-spacing:0.06em;}
+  .back-link{font-size:0.9rem; color:var(--cream-400); border-bottom:1px solid transparent; padding-bottom:2px; transition:color .2s ease, border-color .2s ease;}
+  .back-link:hover{color:var(--gold-300); border-color:var(--gold-500);}
+
+  header.page-head{padding:5rem 1.5rem 3rem; text-align:center;}
+  .page-head p.kicker{color:var(--pink-300); font-size:0.9rem; margin-bottom:0.75rem;}
+  header.page-head h1{font-size:clamp(3rem,9vw,5.5rem);}
+  header.page-head .sub{max-width:34rem; margin:1.25rem auto 0; color:var(--cream-400); line-height:1.7; font-size:1rem;}
+
+  .discography{padding:0 0 6rem;}
+  .release-row{
+    display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:1.25rem;
+    padding:1.5rem 0; border-bottom:1px solid rgba(217,164,65,0.18);
+    transition:background .2s ease;
+  }
+  .release-row:first-of-type{border-top:1px solid rgba(217,164,65,0.18);}
+  .release-row:hover{background:rgba(225,67,107,0.06);}
+  .release-year{font-family:var(--font-display); font-size:1.4rem; color:var(--gold-300); min-width:3.5rem;}
+  .release-title{font-size:1.15rem; font-weight:500;}
+  .release-type{display:block; font-size:0.8rem; color:var(--cream-400); margin-top:0.2rem;}
+  .release-link{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--pink-500);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    transition:background .2s ease;
+  }
+  .release-row:hover .release-link{background:var(--pink-500);}
+  .release-link svg{width:14px; height:14px; fill:var(--pink-300); margin-left:2px;}
+  .release-row:hover .release-link svg{fill:var(--ink-950);}
+
+  footer{text-align:center; padding:2.5rem 1.5rem; color:var(--cream-400); font-size:0.85rem; border-top:1px solid rgba(217,164,65,0.15);}
+
+  @media (max-width: 560px){
+    .release-row{grid-template-columns:auto 1fr; grid-template-areas:"year link" "title title";}
+    .release-year{grid-area:year;}
+    .release-link{grid-area:link; justify-self:end;}
+    .release-title{grid-area:title;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="karenka.html">KARENKA</a>
+    <a class="back-link" href="karenka.html">← Volver al sitio</a>
+  </div>
+</header>
+
+<header class="page-head">
+  <p class="kicker">Discografía completa en Spotify</p>
+  <h1>Música</h1>
+  <p class="sub">Todos los sencillos y álbumes de Karenka, del más nuevo al más antiguo. Toca cualquier título para escucharlo en Spotify.</p>
+</header>
+
+<section class="discography">
+  <div class="wrap">
+
+    <a class="release-row" href="https://open.spotify.com/album/2ESEejuSwLJAl3GhgRyLf4" target="_blank" rel="noopener">
+      <span class="release-year">2026</span>
+      <span><span class="release-title">Soy del Mar</span><span class="release-type">Sencillo — lanzamiento más reciente</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/4hnm0t1ehURvtFlQx7PUUf" target="_blank" rel="noopener">
+      <span class="release-year">2026</span>
+      <span><span class="release-title">Volver a Verte</span><span class="release-type">Sencillo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/5MyBmxRV19jeLE1aUkdias" target="_blank" rel="noopener">
+      <span class="release-year">2026</span>
+      <span><span class="release-title">Hoy Estoy en Paz</span><span class="release-type">Sencillo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/3M7KJ4T0F6xKQh6KFJkFja" target="_blank" rel="noopener">
+      <span class="release-year">2026</span>
+      <span><span class="release-title">Una Canción</span><span class="release-type">Sencillo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/7tfV5OgUgoZEb365lcJf39" target="_blank" rel="noopener">
+      <span class="release-year">2026</span>
+      <span><span class="release-title">No Pido Nada</span><span class="release-type">Sencillo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/79f2NMhfmzk9iP9eNyMQdz" target="_blank" rel="noopener">
+      <span class="release-year">2026</span>
+      <span><span class="release-title">Hay Tiempos</span><span class="release-type">Sencillo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/5k8RVVB2l3a058duCjITu9" target="_blank" rel="noopener">
+      <span class="release-year">2024</span>
+      <span><span class="release-title">Mujer de Acero</span><span class="release-type">Sencillo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/3lO2FN25zCsIYvFvN04IYd" target="_blank" rel="noopener">
+      <span class="release-year">2024</span>
+      <span><span class="release-title">Mientras tenga Vida</span><span class="release-type">Sencillo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/3l3JPqwqu5K9p8SbdV8F1T" target="_blank" rel="noopener">
+      <span class="release-year">2022</span>
+      <span><span class="release-title">Live From Riviera Habana</span><span class="release-type">Álbum en vivo</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/2Ahfk8sODzq99WF7ggBwnp" target="_blank" rel="noopener">
+      <span class="release-year">2017</span>
+      <span><span class="release-title">Que Te Lleve la Marea</span><span class="release-type">Álbum</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/0KwbDfrpAh7zOmUQspOSEr" target="_blank" rel="noopener">
+      <span class="release-year">2015</span>
+      <span><span class="release-title">Chica Mala</span><span class="release-type">Álbum</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+    <a class="release-row" href="https://open.spotify.com/album/1D7HHfkiE0iT87gVvLVjHB" target="_blank" rel="noopener">
+      <span class="release-year">2014</span>
+      <span><span class="release-title">No Fué Perfecto</span><span class="release-type">Álbum</span></span>
+      <span class="release-link" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg></span>
+    </a>
+
+  </div>
+</section>
+
+<footer><p>KK Productions</p></footer>
+
+</body>
+</html>
