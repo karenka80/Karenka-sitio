@@ -62,18 +62,14 @@
     position:relative; width:100%; height:100vh; min-height:560px; overflow:hidden;
     background:var(--ink-950);
   }
-  .hero-photo img{
+  .hero-photo-fg{
     position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover; object-position:50% 2%;
+    object-fit:cover; object-position:50% 15%;
   }
   .hero-photo::after{
     content:""; position:absolute; inset:0;
-    background:linear-gradient(to top, var(--ink-950) 0%, rgba(10,22,32,0) 22%);
+    background:linear-gradient(to top, var(--ink-950) 0%, rgba(10,22,32,0) 14%);
   }
-  .hero-sub{text-align:center; padding:4rem 1.5rem 3rem;}
-  .hero-name{font-size:0.95rem; color:var(--cream-400); margin-bottom:1rem;}
-  .hero-tagline{font-size:1.1rem; line-height:1.7; color:var(--cream-400); max-width:36rem; margin:0 auto;}
-  .hero-actions{margin-top:2.25rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;}
   .btn{display:inline-block; padding:0.85rem 1.75rem; font-size:0.9rem; letter-spacing:0.03em; border-radius:2px; transition:background .2s ease, color .2s ease, border-color .2s ease;}
   .btn-pink{background:var(--pink-500); color:var(--ink-950); font-weight:600;}
   .btn-pink:hover{background:var(--pink-300);}
@@ -221,15 +217,7 @@
 
 <section id="inicio">
   <div class="hero-photo">
-    <img src="karenka-hero.jpg" alt="Karenka">
-  </div>
-  <div class="hero-sub">
-    <p class="hero-name">Karen Juantorena Foyo — nacida en La Habana, hoy radica en México</p>
-    <p class="hero-tagline">Cantante, bailarina, actriz y compositora. Artista principal del Riviera Habana Show, con giras por México y Japón, y créditos de composición para Alejandro Fernández, Luis Fonsi y Belinda.</p>
-    <div class="hero-actions">
-      <a href="#shows" class="btn btn-pink">Ver shows en vivo</a>
-      <a href="https://open.spotify.com/intl-es/artist/66ne4pyFWsqb5ULsqsltVL" class="btn btn-outline" target="_blank" rel="noopener">Escuchar en Spotify</a>
-    </div>
+    <img class="hero-photo-fg" src="karenka-hero.jpg" alt="Karenka">
   </div>
 </section>
 
