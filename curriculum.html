@@ -39,6 +39,8 @@
   .cv-section{padding:2.75rem 0; border-top:1px solid rgba(217,164,65,0.18);}
   .cv-section:first-child{border-top:1px solid rgba(217,164,65,0.18);}
   .cv-section h2{font-size:clamp(1.5rem,4vw,2rem); color:var(--gold-300); margin-bottom:1.5rem;}
+  .cv-section h3{font-family:var(--font-body); font-weight:600; font-size:0.95rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--pink-300); margin:1.75rem 0 0.75rem;}
+  .cv-section h3:first-of-type{margin-top:0;}
 
   .cv-item{padding:0.9rem 0; border-bottom:1px solid rgba(217,164,65,0.1);}
   .cv-item:last-child{border-bottom:none;}
@@ -52,6 +54,19 @@
 
   .cv-lead{color:var(--cream-400); line-height:1.85; font-size:1rem;}
   .cv-lead + .cv-lead{margin-top:1.1rem;}
+
+  .cv-quote{margin-top:1.5rem; padding-left:1.1rem; border-left:2px solid var(--gold-500); color:var(--gold-300); font-style:italic; font-size:0.95rem;}
+
+  .cv-photo{
+    margin-top:1.25rem; aspect-ratio:16/10; background:var(--ink-800); border:1px dashed rgba(217,164,65,0.35);
+    border-radius:4px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:1.5rem; gap:0.6rem;
+  }
+  .cv-photo svg{width:26px; height:26px; opacity:0.6;}
+  .cv-photo p{color:var(--cream-400); font-size:0.85rem; font-style:italic; max-width:22rem;}
+  .cv-photo-grid{margin-top:1.25rem; display:grid; grid-template-columns:repeat(3,1fr); gap:0.9rem;}
+  .cv-photo-grid .cv-photo{margin-top:0; aspect-ratio:1/1; padding:1rem;}
+  @media (max-width:560px){ .cv-photo-grid{grid-template-columns:repeat(2,1fr);} }
 
   .stats-belt{margin-top:0; padding-top:0; border-top:none; display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; text-align:center;}
   .stat-num{display:block; font-family:var(--font-display); font-size:2.25rem; color:var(--pink-300); letter-spacing:0.02em;}
@@ -103,13 +118,35 @@
     </div>
 
     <div class="cv-section">
+      <h2>Historia</h2>
+      <p class="cv-lead">Nací en La Habana, Cuba. Vengo de una familia de artistas y deportistas. Pasé mi niñez en Cuba, donde debuté como actriz a los 5 años para una película del Festival de Cine de las Américas, y a los 9 años puse por primera vez los pies en un estudio de música, para grabar el coro de «Feliz Navidad» y «Canción de Navidad» en el disco de Silvio Rodríguez y José Feliciano, «Calle Latina». A esa corta edad me di cuenta de que mi vida era cantar.</p>
+      <p class="cv-lead">Llegué a México a los 11 años, donde finalicé mis estudios de ballet clásico en el Centro Nacional de las Artes (INBA). A los 13 comencé mi carrera profesional bailando y actuando en videos de artistas como Celia Cruz y Willy Chirino, entre otros. A los 14 actué en mi primera obra de teatro, dirigida por el gran actor Héctor Bonilla, mi mentor en actuación. Fui la única bailarina escogida para montar la coreografía con Antonio Banderas para «La Máscara del Zorro», y aparezco como bailarina en el filme, compartiendo con Anthony Hopkins y Catherine Zeta-Jones.</p>
+      <p class="cv-lead">Así, soñando, trabajando y creciendo como artista, logré actuar, cantar y bailar en obras de teatro y musicales como «Vaselina», «Mónica y el Profesor» y «La Pareja Dispareja», donde tuve el honor de interpretar el coprotagónico femenino junto con Demián Bichir y Héctor Bonilla. En la comedia musical de Broadway «Starlight Express», de Andrew Lloyd Webber, en su primera puesta en escena en español, debuté como cantante en México.</p>
+      <p class="cv-lead">A partir de ese momento continué mi carrera como cantante: grabé la voz principal femenina del grupo Mestizzo, actué en telenovelas y obras de teatro, hice labores filantrópicas, y compuse para otros artistas como Alejandro Fernández, Alejandra Guzmán, Reyli Barba, Luis Fonsi, Belinda y Lucero, entre otros, para luego lanzar mi primer disco en solitario, «Todo es Posible», en 2010, con dos sencillos que se ubicaron entre los veinte primeros lugares de radio a nivel nacional.</p>
+      <p class="cv-lead">Hoy soy Karenka: compositora, música, actriz, bailarina y una poeta que continúa acumulando sueños, aprendizajes y éxitos en su carrera profesional.</p>
+      <p class="cv-quote">«Gracias por seguir creciendo conmigo. Los amo, Karenka.»</p>
+      <div class="cv-photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg>
+        <p>Foto pendiente — Karenka con Héctor Bonilla, su mentor en actuación</p>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <h2>Estudios</h2>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Instituto Nacional de Bellas Artes (INBA)</span></div><p class="cv-item-desc">Graduada en ballet clásico, con asignaturas complementarias de música y actuación.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">CEA — Centro de Educación Artística de Televisa</span></div><p class="cv-item-desc">Egresada de la carrera de actriz.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Compositora</span></div><p class="cv-item-desc">Música empírica, guitarra y piano.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Campeona infantil de ballet acuático</span></div></div>
+    </div>
+
+    <div class="cv-section">
       <h2>Shows y giras</h2>
       <div class="cv-item">
         <div class="cv-item-head">
           <span class="cv-item-title">Riviera Habana Show</span>
-          <span class="cv-item-year">Vidanta — desde 2022</span>
+          <span class="cv-item-year">Vidanta — desde 2021</span>
         </div>
-        <p class="cv-item-desc">Espectáculo de vedette en el que Karenka baila y canta a través de un recorrido por la música cubana. Artista principal. Tiene su propio álbum en vivo, «Live From Riviera Habana».</p>
+        <p class="cv-item-desc">Un viaje a la Habana de los años 50, el espectáculo del Grupo Vidanta Riviera Maya en el que Karenka baila y canta a través de un recorrido por la música cubana. Artista residente, compartiendo casa con Cirque du Soleil Joya. Tiene su propio álbum en vivo, «Live From Riviera Habana».</p>
       </div>
       <div class="cv-item">
         <div class="cv-item-head">
@@ -132,6 +169,16 @@
         </div>
         <p class="cv-item-desc">Cena-show dedicada al bolero, producida por KK Productions.</p>
       </div>
+
+      <h3>Presentaciones destacadas</h3>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Havana 1950</span><span class="cv-item-year">Tokio, Japón — 2023</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Habana Show by Karenka</span><span class="cv-item-year">2023</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Feria del Carmen</span><span class="cv-item-year">2023</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Carnaval Playa del Carmen</span><span class="cv-item-year">2023 y 2024</span></div><p class="cv-item-desc">Abriendo para Sebastián Yatra y Margarita La Diosa de la Cumbia, compartiendo cartelera con Juanes.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Convención ANAM</span><span class="cv-item-year">2024</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Carnaval Cozumel</span><span class="cv-item-year">2024</span></div><p class="cv-item-desc">Compartiendo cartelera con Maluma.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Carnaval Tulum</span><span class="cv-item-year">2024</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Carnaval Salina Cruz</span><span class="cv-item-year">2024</span></div></div>
     </div>
 
     <div class="cv-section">
@@ -145,7 +192,22 @@
         <span class="cv-chip">Maia</span>
         <span class="cv-chip">Reyli Barba</span>
       </div>
-      <p class="cv-lead" style="margin-top:1.25rem;">Compuso el himno por los cien años de la Cruz Roja Mexicana. Compartió escenario y videoclips con Celia Cruz, incluyendo «Mi Vida Es Cantar».</p>
+      <div style="margin-top:1.5rem;">
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«A Manos Llenas»</span><span class="cv-item-year">Alejandro Fernández</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Así Debe de Ser»</span><span class="cv-item-year">Luis Fonsi</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Sé Quién Soy»</span><span class="cv-item-year">Reyli Barba</span></div><p class="cv-item-desc">Tema del reality Big Brother.</p></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Todos Caben»</span><span class="cv-item-year">Reyli Barba</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Quiero Ser»</span><span class="cv-item-year">Alejandra Guzmán</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Esta Noche»</span><span class="cv-item-year">Alejandra Guzmán</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«El Cable»</span><span class="cv-item-year">Lucero</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Vete por Donde Llegaste»</span><span class="cv-item-year">Lucero</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Es de Verdad»</span><span class="cv-item-year">Belinda</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Noche Cool»</span><span class="cv-item-year">Belinda</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Good Good»</span><span class="cv-item-year">Belinda</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Báilame Despacito»</span><span class="cv-item-year">Banda Tigrillos</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«He Tenido Que Aprender»</span><span class="cv-item-year">Maia</span></div></div>
+        <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Himno de los 100 Años de la Cruz Roja Mexicana</span></div></div>
+      </div>
     </div>
 
     <div class="cv-section">
@@ -163,6 +225,20 @@
       <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Chica Mala</span><span class="cv-item-year">2015 · Álbum</span></div></div>
       <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">No Fué Perfecto</span><span class="cv-item-year">2014 · Álbum</span></div></div>
       <p class="cv-lead" style="margin-top:1.5rem;"><a href="musica.html" style="color:var(--gold-300); border-bottom:1px solid var(--gold-500);">Ver discografía completa en Spotify →</a></p>
+
+      <h3>También en su catálogo</h3>
+      <div class="cv-list">
+        <span class="cv-chip">Coros — «Calle Latina» (Silvio Rodríguez y José Feliciano)</span>
+        <span class="cv-chip">Voz líder — Grupo Mestizzo, «Baila Morena»</span>
+        <span class="cv-chip">«Todo es Posible» (2010, disco debut)</span>
+        <span class="cv-chip">«Aquí Voy» (EP)</span>
+        <span class="cv-chip">«Te Vas»</span>
+        <span class="cv-chip">«Te Voy a Contar» (EP)</span>
+        <span class="cv-chip">«Karenkeando»</span>
+        <span class="cv-chip">«El Abc» — Grupo ABC</span>
+        <span class="cv-chip">«Dame» — Grupo Las Fieras</span>
+        <span class="cv-chip">«Así es la Vida»</span>
+      </div>
     </div>
 
     <div class="cv-section">
@@ -176,6 +252,87 @@
         <span class="cv-chip">Polos Opuestos</span>
       </div>
       <p class="cv-lead" style="margin-top:1.25rem;"><a href="videos.html" style="color:var(--gold-300); border-bottom:1px solid var(--gold-500);">Ver todos los videos →</a></p>
+
+      <h3>Baile y video clips con otros artistas</h3>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Mi Vida Es Cantar»</span><span class="cv-item-year">Video clip — Celia Cruz</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«El Mambo de Gerardo»</span><span class="cv-item-year">Video clip — Gerardo</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«La Jinetera»</span><span class="cv-item-year">Video clip — Willy Chirino</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Vida de Perros»</span><span class="cv-item-year">Video clip — Miguel Luna</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«No Me Mires a los Ojos»</span><span class="cv-item-year">Video clip — Issac Delgado</span></div></div>
+      <div class="cv-photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg>
+        <p>Foto pendiente — Karenka con Celia Cruz</p>
+      </div>
+
+      <h3>Ballet y escenario</h3>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Lago de los Cisnes»</span><span class="cv-item-year">Bosque de Chapultepec, México</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Cascanueces»</span><span class="cv-item-year">Palacio de Bellas Artes, México</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Don Quijote»</span><span class="cv-item-year">Teatro Flores Canelo, CNA México</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Sílfides»</span><span class="cv-item-year">Teatro Flores Canelo, CNA México</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Barro Negro»</span><span class="cv-item-year">Teatro Flores Canelo, CNA México</span></div></div>
+    </div>
+
+    <div class="cv-section">
+      <h2>Televisión</h2>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">DKDA</span><span class="cv-item-year">Telenovela, Televisa</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Amor a Mil por Hora</span><span class="cv-item-year">Telenovela, Televisa</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Clase 406</span><span class="cv-item-year">Telenovela, Televisa</span></div><p class="cv-item-desc">Personaje antagónico.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">CLAP, el Lugar de tus Sueños</span><span class="cv-item-year">Telenovela, Televisa</span></div><p class="cv-item-desc">Personaje protagónico.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Súbete a mi Moto</span><span class="cv-item-year">Serie</span></div><p class="cv-item-desc">Personificando a Cristina Saralegui.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">La Saga</span><span class="cv-item-year">con Adela Micha</span></div></div>
+      <div class="cv-list" style="margin-top:0.75rem;">
+        <span class="cv-chip">Mujer, Casos de la Vida Real</span>
+        <span class="cv-chip">Al Fin de Semana</span>
+        <span class="cv-chip">Cuídate de la Cámara</span>
+        <span class="cv-chip">Es de Noche y Ya Llegué</span>
+      </div>
+      <p class="cv-item-desc" style="margin-top:1rem;">Entre otros programas de la televisión mexicana.</p>
+    </div>
+
+    <div class="cv-section">
+      <h2>Teatro</h2>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Starlight Express»</span><span class="cv-item-year">Andrew Lloyd Webber</span></div><p class="cv-item-desc">Personaje coprotagónico — primera puesta en escena en español; debut como cantante en México.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«La Pareja Dispareja»</span><span class="cv-item-year">2 montajes</span></div><p class="cv-item-desc">Protagónico femenino junto a Demián Bichir y Héctor Bonilla; y, en otro montaje, junto a Alejandro Calvo y Omar Germenos.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Mónica y el Profesor»</span></div><p class="cv-item-desc">Protagónico, junto a Patricio Castillo y Nacho Méndez. Dirección de Héctor Bonilla.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Vaselina»</span></div><p class="cv-item-desc">Licha, coprotagónico, junto a Alejandro Ibarra, Bárbara Mori y Chantal Andere.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Caperucita Roja»</span></div><p class="cv-item-desc">Teatro infantil, junto a Luis Roberto Guzmán y Lupita Sandoval.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Rumba y Pasión»</span></div><p class="cv-item-desc">Personaje antagónico, junto a Maribel Guardia, Lorena Herrera y Benny Ibarra.</p></div>
+    </div>
+
+    <div class="cv-section">
+      <h2>Cine</h2>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Una Niña de Angola»</span></div><p class="cv-item-desc">Documental — Festival de Cine de las Américas, La Habana, Cuba.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«La Máscara del Zorro»</span></div><p class="cv-item-desc">Con Antonio Banderas, Catherine Zeta-Jones y Anthony Hopkins.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">«Viajes de Esperanza»</span></div><p class="cv-item-desc">Cine mexicano.</p></div>
+      <div class="cv-photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg>
+        <p>Foto pendiente — Karenka con Antonio Banderas, Catherine Zeta-Jones y Anthony Hopkins en «La Máscara del Zorro»</p>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <h2>Realitys de TV</h2>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Bailando por un Sueño</span><span class="cv-item-year">Televisa</span></div><p class="cv-item-desc">Primera temporada — Karenka, segundo lugar.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Bailadísimo</span><span class="cv-item-year">Multimedios Televisión</span></div><p class="cv-item-desc">Cinco temporadas continuas como la Juez de Hierro.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Reto 4 Elementos</span><span class="cv-item-year">Televisa</span></div><p class="cv-item-desc">Primera temporada — semifinalista.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Bailadísimo</span><span class="cv-item-year">2024 — al aire</span></div><p class="cv-item-desc">Como Juez de Hierro.</p></div>
+    </div>
+
+    <div class="cv-section">
+      <h2>Reconocimientos</h2>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Premios Monitor Latino</span><span class="cv-item-year">Artista Revelación del Año</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Premios Revista Q</span><span class="cv-item-year">Grupo ABC — Grupo Urbano del Año</span></div></div>
+    </div>
+
+    <div class="cv-section">
+      <h2>Altruismo</h2>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Embajada Turística del Estado de Quintana Roo</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Madrina de los niños con síndrome de Down deportistas de México</span><span class="cv-item-year">Asociación CORA</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Madrina de los 100 Años de la Cruz Roja Mexicana</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Marcha del Orgullo LGBTTTI CDMX</span><span class="cv-item-year">XXXVII edición</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Cantante en el concierto de apoyo a la diversidad sexual</span><span class="cv-item-year">La Habana, Cuba</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Creadora de la Fundación «Caribe Solo Hay Uno»</span></div><p class="cv-item-desc">Movimiento artístico altruista para salvaguardar el Caribe mexicano. También compuso el himno del movimiento.</p></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Compositora del Himno de los 100 Años de la Cruz Roja Mexicana</span></div></div>
     </div>
 
     <div class="cv-section">
@@ -196,7 +353,21 @@
       <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Instagram — @karenkaoficial</span><span class="cv-item-year">508K seguidores</span></div></div>
       <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">Facebook — Karenka</span><span class="cv-item-year">1.5M+ seguidores</span></div></div>
       <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">TikTok — @karenkaoficial</span><span class="cv-item-year">53.5K seguidores</span></div></div>
+      <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">X (Twitter)</span><span class="cv-item-year">85K seguidores</span></div></div>
       <div class="cv-item"><div class="cv-item-head"><span class="cv-item-title">YouTube — Karenka Oficial</span><span class="cv-item-year">16.5K suscriptores</span></div></div>
+    </div>
+
+    <div class="cv-section">
+      <h2>Galería</h2>
+      <p class="cv-lead">Momentos de su carrera — súbelas cuando las tengas.</p>
+      <div class="cv-photo-grid">
+        <div class="cv-photo"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg><p>Foto pendiente</p></div>
+        <div class="cv-photo"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg><p>Foto pendiente</p></div>
+        <div class="cv-photo"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg><p>Foto pendiente</p></div>
+        <div class="cv-photo"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg><p>Foto pendiente</p></div>
+        <div class="cv-photo"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg><p>Foto pendiente</p></div>
+        <div class="cv-photo"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.2-2h5.6L16 6"/></svg><p>Foto pendiente</p></div>
+      </div>
     </div>
 
     <div class="cv-contact">
